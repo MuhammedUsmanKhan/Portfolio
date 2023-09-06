@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://kit.fontawesome.com/5a0b948d4f.js" crossorigin="anonymous"></script>
+    <style>
+        /* Additional CSS for animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeInUp 0.5s ease-out;
+        }
+    </style>
+</head>
+
+<body class="box-border bg-[#171724]">
+    <header class="bg-[#171724] z-[100] w-full fixed top-0">
+        <nav class="container mx-auto flex justify-between items-center w-[92%] min-w-fit">
+            <!-- Add max-w-screen-xl to limit the nav container width -->
+            <div class="flex z-50 bg-[#171724] justify-center h-16 tracking-widest items-center">
+                <h1 class="text-center align-middle text-xl text-white font-bold">PORTFOLIO</h1>
+                <img class="h-11 w-12 sm:w-11 hidden  rounded-full" src="../img/ben-sweet-2LowviVHZ-E-unsplash.jpg"
+                    alt="Pfp not found" id="userNavProfImg">
+            </div>
+            <div id="navList"
+                class="flex z-[-1] md:z-0 bg-[#171724] flex-col  md:items-center absolute md:w-auto top-0 invisible md:visible -translate-y-full md:-translate-y-0 left-0 md:top-auto md:left-auto duration-500 md:duration-0 w-full md:h-fit md:static">
+                <!-- <div class="flex justify-start p-2 sm:hidden">
+                    <i id="x" class="fa-solid fa-x text-blue-600"></i>
+                </div> -->
+                <ul class="flex p-5   justify-start gap-8 flex-col md:flex-row md:justify-evenly text-white">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./profile.html">About</a></li>
+                    <li><a href="./dashboard.html">Services</a></li>
+                    <li><a href="./dashboard.html">Portfolio</a></li>
+                    <li><a href="./dashboard.html">Contact</a></li>
+                    <!-- <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li> -->
+                </ul>
+            </div>
+            <div class="flex z-50 items-center gap-2">
+                <button id="logInBut"
+                    class="bg-blue-600 rounded-2xl p-2 text-sm outline-none text-white font-semibold">Log
+                    In</button>
+                <div class="sm:hidden">
+                    <i id="bar" class="fa-solid fa-bars text-white"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="min-h-screen flex items-center mb-14 bg-[#171724] sm:px-0 py-20 pb-0 px-0 w-full ">
+            <div id="myElement" class="container mx-auto  flex flex-col sm:flex-row  items-center w-[92%]   ">
+                <div class="flex text-white order-2 space-y-7 justify-start  mt-4 sm:mt-0 sm:w-3/4 flex-col">
+                    <div>
+                        <span class="text-2xl sm:text-3xl ">Hello there ! Its Me</span>
+                        <p class="text-3xl sm:text-4xl text-[#005A9C] font-semibold">Muhammad Usman Khan</p>
+                        <span class="text-2xl sm:text-3xl">Welcome to My Web Development World!</span>
+                        <span class="text-2xl sm:text-3xl">I'm a Passionate <span class="text-[#005A9C] font-bold">MERN
+                                Stack Developer</span></span>
+                        <p class="text-sm sm:text-base">I'm passionate about turning your web ideas into stunning,
+                            functional reality. With Excellency in
+                            <b class="text-[#005A9C]"> HTML, CSS, JavaScript, </b>and proficiency in both frontend and
+                            backend technologies like <b class="text-[#005A9C]">React,
+                                Express, Node.js, and MongoDB</b>, I'm your go-to <b class="text-[#005A9C]">MERN Stack
+                                Developer</b> for web projects that stand out.
+                        </p>
+                        <p class="text-lg sm:text-xl ">"Turning Ideas into Web Reality with MERN Stack Magic."</p>
+                    </div>
+                    <div class="w-full ">
+                        <ul class=' flex gap-4 sm:gap-5  flex-wrap justify-start '>
+                            <li class='flex flex-col rounded-full border-solid border-2 p-2 border-[#005A9C] w-11 items-center'>
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <span class=' '><i
+                                            class="text-lg text-[#005A9C] fa-brands fa-linkedin-in"></i></span>
+                                </a>
+                            </li>
+                            <li class='flex flex-col rounded-full border-solid border-2 p-2 border-[#005A9C] w-11 items-center'>
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <span class=' '><i
+                                            class="text-lg text-[#005A9C] fa-brands fa-github"></i></span>
+                                </a>
+                            </li>
+                            <li class='flex flex-col rounded-full border-solid border-2 p-2 border-[#005A9C] w-11 items-center'>
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <span class=' '><i
+                                            class="text-lg text-[#005A9C] fa-brands fa-whatsapp"></i></span>
+                                </a>
+                            </li>
+                            <li class='flex flex-col rounded-full border-solid border-2 p-2 border-[#005A9C] w-11 items-center'>
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <span class=' '><i
+                                            class="text-lg text-[#005A9C] fa-brands fa-instagram"></i></span>
+                                </a>
+                            </li>
+                            <li class='flex flex-col rounded-full border-solid border-2 p-2 border-[#005A9C] w-11 items-center'>
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <span class=' '><i
+                                            class="text-lg text-[#005A9C] fa-brands fa-twitter"></i></span>
+                                </a>
+                            </li>
+                            <li class='flex flex-col rounded-full border-solid border-2 p-2 border-[#005A9C]  w-11 items-center'>
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <span class='  '><i
+                                            class="text-lg text-[#005A9C] fa-brands fa-facebook"></i></span>
+                                </a>
+                            </li>
+                            <li class='flex flex-col rounded-full border-solid border-2 p-2 border-[#005A9C] w-11 items-center'>
+                                <a href="#" target="_blank" rel="noopener noreferrer">
+                                    <span class=' '><i
+                                            class="text-lg text-[#005A9C] fa-brands fa-discord"></i></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex">
+                        <button class="bg-[#005A9C] text-[#171724] font-bold text-lg p-3 pt-2 pb-2 rounded-full">Download CV</button>
+                    </div>
+                </div>
+                <div class="flex justify-center sm:justify-end w-1/2 order-1 sm:order-2 sm:w-1/4  items-center">
+                    <!-- <img src="./img/my img.png" class=" sm:hidden rounded-full" alt=""> -->
+                    <img src="./img/IMG_20200802_160450-removebg-preview.png" class="  sm:flex transform rounded-full"
+                        alt="">
+                </div>
+            </div>
+        </section>
+        <section class="min-h-screen bg-[#171724] flex space-y-14  flex-col justify-center items-center">
+            <h2 class="text-3xl font-semibold   text-center  text-white"><span class="text-[#222231]">My</span>
+                <span class="text-[#005A9C]">Skills</span></h2>
+            <div class="flex flex-col md:flex-row md:space-x-8 md:space-y-0 space-y-8 w-[92%] ">
+                <div class="bg-[#1E1E2A]  flex items-center justify-center">
+                    <div
+                        class="max-w-md bg-[#1E1E2A]  w-full p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animated">
+                        <h1 class="text-3xl font-semibold text-[#005A9C] mb-4">Front-End Development</h1>
+
+                        <!-- Skill Description -->
+                        <p class="text-white text-lg mb-4">
+                            I bring a comprehensive front-end skill set to the table, with expertise in HTML,
+                            CSS,
+                            and JavaScript. My experience extends to crafting responsive and visually appealing
+                            interfaces that adapt seamlessly to various devices. I've successfully created
+                            dynamic
+                            and interactive web elements that enhance user engagement.
+                        </p>
+
+                        <!-- Add more details or specific skills here -->
+                        <div class="mb-4">
+                            <h2 class="text-lg font-medium text-[#005A9C]">Key Skills</h2>
+                            <ul class="list-disc pl-5">
+                                <li class="text-white">HTML</li>
+                                <li class="text-white">CSS</li>
+                                <li class="text-white">JavaScript</li>
+                                <!-- Add more skills here -->
+                            </ul>
+                        </div>
+
+                        <!-- Animated button -->
+                        <a href="#"
+                            class="bg-[#005A9C] text-white py-2 px-4 rounded-full text-center block hover:bg-indigo-700 transition-colors duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-[#1E1E2A]  flex items-center justify-center">
+                    <div
+                        class="max-w-md w-full bg-[#1E1E2A] p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animated">
+                        <h1 class="text-3xl font-semibold text-[#005A9C] mb-4">Back-End Development</h1>
+
+                        <!-- Skill Description -->
+                        <p class="text-white text-lg mb-4">
+                            I bring a comprehensive front-end skill set to the table, with expertise in HTML, CSS,
+                            and
+                            JavaScript. My experience extends to crafting responsive and visually appealing
+                            interfaces
+                            that adapt seamlessly to various devices. I've successfully created dynamic and
+                            interactive
+                            web elements that enhance user engagement.
+                        </p>
+
+                        <!-- Add more details or specific skills here -->
+                        <div class="mb-4">
+                            <h2 class="text-lg font-medium text-[#005A9C]">Key Skills</h2>
+                            <ul class="list-disc pl-5">
+                                <li class="text-white">HTML</li>
+                                <li class="text-white">CSS</li>
+                                <li class="text-white">JavaScript</li>
+                                <!-- Add more skills here -->
+                            </ul>
+                        </div>
+
+                        <!-- Animated button -->
+                        <a href="#"
+                            class="bg-[#005A9C] text-white py-2 px-4 rounded-full text-center block hover:bg-indigo-700 transition-colors duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-[#1E1E2A]  flex items-center justify-center">
+                    <div
+                        class="max-w-md bg-[#1E1E2A]  w-full p-8 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300 animated">
+                        <h1 class="text-3xl font-semibold text-[#005A9C] mb-4">Mern-Stack Development</h1>
+
+                        <!-- Skill Description -->
+                        <p class="text-white text-lg mb-4">
+                            I bring a comprehensive front-end skill set to the table, with expertise in HTML,
+                            CSS,
+                            and JavaScript. My experience extends to crafting responsive and visually appealing
+                            interfaces that adapt seamlessly to various devices. I've successfully created
+                            dynamic
+                            and interactive web elements that enhance user engagement.
+                        </p>
+
+                        <!-- Add more details or specific skills here -->
+                        <div class="mb-4">
+                            <h2 class="text-lg font-medium text-[#005A9C]">Key Skills</h2>
+                            <ul class="list-disc pl-5">
+                                <li class="text-white">HTML</li>
+                                <li class="text-white">CSS</li>
+                                <li class="text-white">JavaScript</li>
+                                <!-- Add more skills here -->
+                            </ul>
+                        </div>
+
+                        <!-- Animated button -->
+                        <a href="#"
+                            class="bg-[#005A9C] text-white py-2 px-4 rounded-full text-center block hover:bg-indigo-700 transition-colors duration-300">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="about" class="pt-10 md:pt-20 md:min-h-screen bg-[#171724] ">
+            <div class="container  flex flex-col   mx-auto w-[92%]">
+                <h2 class="text-3xl font-semibold  text-center mb-6 text-white"><span class="text-[#222231]">My</span>
+                    <span class="text-[#005A9C]">Projects</span>
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 p-8   ">
+                    <div class="relative group  overflow-hidden">
+                        <div
+                            class="bg-gradient-to-t from-gray-700 to-transparent absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <img src="./img/IMG_20200802_160450-removebg-preview.png" alt="Project Image"
+                            class="object-cover w-full h-64 transition-transform transform group-hover:scale-105">
+                        <div class="p-4 absolute inset-0 z-20 flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-2xl font-semibold text-white mb-2">Project Title</h2>
+                                <p class="text-gray-200">Project description or details go here.</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full inline-block transition-transform transform translate-y-0 group-hover:translate-y-[-50%] duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden">
+                        <div
+                            class="bg-gradient-to-t from-gray-700 to-transparent absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <img src="your-image.jpg" alt="Project Image"
+                            class="object-cover w-full h-64 transition-transform transform group-hover:scale-105">
+                        <div class="p-4 absolute inset-0 z-20 flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-2xl font-semibold text-white mb-2">Project Title</h2>
+                                <p class="text-gray-200">Project description or details go here.</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full inline-block transition-transform transform translate-y-0 group-hover:translate-y-[-50%] duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative group overflow-hidden">
+                        <div
+                            class="bg-gradient-to-t from-gray-700 to-transparent absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <img src="your-image.jpg" alt="Project Image"
+                            class="object-cover w-full h-64 transition-transform transform group-hover:scale-105">
+                        <div class="p-4 absolute inset-0 z-20 flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-2xl font-semibold text-white mb-2">Project Title</h2>
+                                <p class="text-gray-200">Project description or details go here.</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full inline-block transition-transform transform translate-y-0 group-hover:translate-y-[-50%] duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden">
+                        <div
+                            class="bg-gradient-to-t from-gray-700 to-transparent absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <img src="your-image.jpg" alt="Project Image"
+                            class="object-cover w-full h-64 transition-transform transform group-hover:scale-105">
+                        <div class="p-4 absolute inset-0 z-20 flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-2xl font-semibold text-white mb-2">Project Title</h2>
+                                <p class="text-gray-200">Project description or details go here.</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full inline-block transition-transform transform translate-y-0 group-hover:translate-y-[-50%] duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden">
+                        <div
+                            class="bg-gradient-to-t from-gray-700 to-transparent absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <img src="your-image.jpg" alt="Project Image"
+                            class="object-cover w-full h-64 transition-transform transform group-hover:scale-105">
+                        <div class="p-4 absolute inset-0 z-20 flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-2xl font-semibold text-white mb-2">Project Title</h2>
+                                <p class="text-gray-200">Project description or details go here.</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full inline-block transition-transform transform translate-y-0 group-hover:translate-y-[-50%] duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative group overflow-hidden">
+                        <div
+                            class="bg-gradient-to-t from-gray-700 to-transparent absolute inset-0 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <img src="your-image.jpg" alt="Project Image"
+                            class="object-cover w-full h-64 transition-transform transform group-hover:scale-105">
+                        <div class="p-4 absolute inset-0 z-20 flex flex-col justify-between">
+                            <div>
+                                <h2 class="text-2xl font-semibold text-white mb-2">Project Title</h2>
+                                <p class="text-gray-200">Project description or details go here.</p>
+                            </div>
+                            <div class="mt-4">
+                                <a href="#"
+                                    class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-full inline-block transition-transform transform translate-y-0 group-hover:translate-y-[-50%] duration-300">View
+                                    Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="./index.mjs"></script>
+</body>
+
+</html>
